@@ -1,0 +1,6 @@
+name: CustomBI
+version: @version@
+main: com.github.mcsti.custombi.Main
+api-version: 1.16
+authors: [ enimaloc ]
+description: Allow developers to add Blocks and Items in the games
