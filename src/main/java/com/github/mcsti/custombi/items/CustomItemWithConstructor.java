@@ -14,14 +14,11 @@ public abstract class CustomItemWithConstructor implements CustomItem {
     @Nullable
     private final Material material;
     
-    private final ItemsModule module;
-    
     public CustomItemWithConstructor(
-            ItemsModule module, int customModelData, String name, int maxStackSize, int maxDurability,
-            @Nullable Material material,
+            int customModelData, int maxStackSize, int maxDurability, @Nullable Material material,
+            String name,
             String... lores
     ) {
-        this.module = module;
         this.customModelData = customModelData;
         this.name = name;
         this.maxStackSize = maxStackSize;
