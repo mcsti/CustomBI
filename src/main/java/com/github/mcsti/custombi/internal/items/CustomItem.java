@@ -1,8 +1,9 @@
-package com.github.mcsti.custombi.items;
+package com.github.mcsti.custombi.internal.items;
 
 import com.github.mcsti.tuples.Pair;
 import net.minecraft.server.v1_16_R3.NBTTagCompound;
 import org.bukkit.Material;
+import org.bukkit.NamespacedKey;
 import org.bukkit.craftbukkit.v1_16_R3.inventory.CraftItemStack;
 import org.bukkit.event.block.BlockDropItemEvent;
 import org.bukkit.event.enchantment.EnchantItemEvent;
@@ -14,10 +15,8 @@ import org.bukkit.event.inventory.InventoryPickupItemEvent;
 import org.bukkit.event.inventory.PrepareItemCraftEvent;
 import org.bukkit.event.player.*;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.ShapedRecipe;
 import org.bukkit.inventory.meta.ItemMeta;
 
-import javax.annotation.Nullable;
 import java.util.Arrays;
 import java.util.Locale;
 
@@ -34,7 +33,7 @@ public interface CustomItem {
     default ItemStack getItemStack(int amount) {
         net.minecraft.server.v1_16_R3.ItemStack nms = CraftItemStack.asNMSCopy(new ItemStack(getMaterial(), amount));
         NBTTagCompound                          tag = nms.getOrCreateTag();
-        tag.setString("id", getId());
+        tag.setString("namespace", getNamespace().toString());
         nms.setTag(tag);
         ItemStack itemStack = CraftItemStack.asBukkitCopy(nms);
     
@@ -49,8 +48,8 @@ public interface CustomItem {
         
         return itemStack;
     };
-    default String getId() {
-        return "custombi:"+getName().replaceAll(" ", "_").toLowerCase(Locale.ROOT);
+    default NamespacedKey getNamespace() {
+        return NamespacedKey.fromString("custombi:"+getName().replaceAll(" ", "_").toLowerCase(Locale.ROOT));
     }
     Material getMaterial();
     default Pair<ItemStack[], Integer> getUnshapedCraft() {

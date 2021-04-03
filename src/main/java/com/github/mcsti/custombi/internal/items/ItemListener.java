@@ -1,6 +1,5 @@
-package com.github.mcsti.custombi.items;
+package com.github.mcsti.custombi.internal.items;
 
-import com.github.mcsti.tuples.Pair;
 import org.bukkit.Material;
 import org.bukkit.craftbukkit.v1_16_R3.inventory.CraftItemStack;
 import org.bukkit.entity.Item;
@@ -21,9 +20,9 @@ import java.util.stream.Stream;
 
 public class ItemListener implements Listener {
     
-    private final ItemsModule module;
+    private final ItemsModuleImpl module;
     
-    public ItemListener(ItemsModule module) {
+    public ItemListener(ItemsModuleImpl module) {
         this.module = module;
     }
     

@@ -1,8 +1,10 @@
-package com.github.mcsti.custombi.items;
+package com.github.mcsti.custombi.internal.items;
 
 import org.bukkit.Material;
+import org.bukkit.NamespacedKey;
 
 import javax.annotation.Nullable;
+import java.util.Locale;
 
 public abstract class CustomItemWithConstructor implements CustomItem {
     
@@ -11,25 +13,33 @@ public abstract class CustomItemWithConstructor implements CustomItem {
     private final int maxStackSize;
     private final int maxDurability;
     private final int customModelData;
-    @Nullable
-    private final Material material;
+    @Nullable private final Material material;
+    @Nullable private final NamespacedKey namespace;
     
     public CustomItemWithConstructor(
             int customModelData, int maxStackSize, int maxDurability, @Nullable Material material,
+            @Nullable NamespacedKey namespace,
             String name,
             String... lores
     ) {
         this.customModelData = customModelData;
-        this.name = name;
         this.maxStackSize = maxStackSize;
         this.maxDurability = maxDurability;
         this.material = material;
+        this.namespace = namespace;
+        this.name = name;
         this.lores = lores;
     }
     
     @Override
     public String getName() {
         return name;
+    }
+    
+    @Override
+    public NamespacedKey getNamespace() {
+        return namespace != null ? namespace : NamespacedKey
+                .fromString("custombi:"+getName().replaceAll(" ", "_").toLowerCase(Locale.ROOT));
     }
     
     @Override

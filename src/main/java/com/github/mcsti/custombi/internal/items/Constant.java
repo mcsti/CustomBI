@@ -1,4 +1,4 @@
-package com.github.mcsti.custombi.items;
+package com.github.mcsti.custombi.internal.items;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
@@ -24,6 +24,7 @@ public class Constant {
                     1,
                     1,
                     Material.STICK,
+                    null,
                     "Drop debug"
             ) {
                 @Override
@@ -42,6 +43,7 @@ public class Constant {
                     1,
                     1,
                     Material.STICK,
+                    null,
                     "Despawn debug"
             ) {
                 @Override
@@ -60,6 +62,7 @@ public class Constant {
                     1,
                     1,
                     Material.STICK,
+                    null,
                     "Merge debug"
             ) {
                 @Override
@@ -78,6 +81,7 @@ public class Constant {
                     1,
                     1,
                     Material.STICK,
+                    null,
                     "Spawn debug"
             ) {
                 @Override
@@ -96,6 +100,7 @@ public class Constant {
                     1,
                     1,
                     Material.STICK,
+                    null,
                     "Block drop debug"
             ) {
                 @Override
@@ -114,6 +119,7 @@ public class Constant {
                     1,
                     1,
                     Material.STICK,
+                    null,
                     "Craft item debug"
             ) {
                 @Override
@@ -132,6 +138,7 @@ public class Constant {
                     1,
                     1,
                     Material.STICK,
+                    null,
                     "Enchant item debug"
             ) {
                 @Override
@@ -150,6 +157,7 @@ public class Constant {
                     1,
                     1,
                     Material.STICK,
+                    null,
                     "Entity pickup item debug"
             ) {
                 @Override
@@ -168,6 +176,7 @@ public class Constant {
                     1,
                     1,
                     Material.STICK,
+                    null,
                     "Entity drop debug"
             ) {
                 @Override
@@ -186,6 +195,7 @@ public class Constant {
                     1,
                     1,
                     Material.STICK,
+                    null,
                     "Inventory move debug"
             ) {
                 @Override
@@ -204,6 +214,7 @@ public class Constant {
                     1,
                     1,
                     Material.STICK,
+                    null,
                     "Inventory pickup debug"
             ) {
                 @Override
@@ -222,6 +233,7 @@ public class Constant {
                     1,
                     1,
                     Material.STICK,
+                    null,
                     "Player item break debug"
             ) {
                 @Override
@@ -239,6 +251,7 @@ public class Constant {
                     1,
                     1,
                     Material.STICK,
+                    null,
                     "Player item consume debug"
             ) {
                 @Override
@@ -257,6 +270,7 @@ public class Constant {
                     1,
                     1,
                     Material.STICK,
+                    null,
                     "Item damage debug"
             ) {
                 @Override
@@ -275,6 +289,7 @@ public class Constant {
                     1,
                     1,
                     Material.STICK,
+                    null,
                     "Item held debug"
             ) {
                 @Override
@@ -293,6 +308,7 @@ public class Constant {
                     1,
                     1,
                     Material.STICK,
+                    null,
                     "Item meld debug"
             ) {
                 @Override
@@ -311,6 +327,7 @@ public class Constant {
                     1,
                     1,
                     Material.STICK,
+                    null,
                     "Pickup debug"
             ) {
                 @Override
@@ -329,6 +346,7 @@ public class Constant {
                     1,
                     1,
                     Material.STICK,
+                    null,
                     "Swap hand debug"
             ) {
                 @Override
@@ -347,6 +365,7 @@ public class Constant {
                     1,
                     1,
                     Material.STICK,
+                    null,
                     "Prepare craft debug"
             ) {
                 @Override
@@ -364,6 +383,7 @@ public class Constant {
                     1,
                     1,
                     Material.STICK,
+                    null,
                     "Prepare enchant debug"
             ) {
                 @Override
@@ -382,6 +402,7 @@ public class Constant {
                     1,
                     1,
                     Material.STICK,
+                    null,
                     "Interact at entity debug"
             ) {
                 @Override
@@ -400,6 +421,7 @@ public class Constant {
                     1,
                     1,
                     Material.STICK,
+                    null,
                     "Interact entity drop debug"
             ) {
                 @Override
@@ -418,6 +440,7 @@ public class Constant {
                     1,
                     1,
                     Material.STICK,
+                    null,
                     "player interact debug"
             ) {
                 @Override
